@@ -14,16 +14,12 @@ const getHomewworkById = require("./routes/getHomeworkById");
 const setDoneToTask = require("./routes/setDoneDataOfTask");
 const addTaskTeacher = require("./routes/addTaskTeacher");
 const getTaskByTeacherId = require("./routes/getTaskByTeacherId");
-//const authTeacherRoutes = require("./routes/auth teacher");
 
-// database connection
 connection();
 
-// middlewares
 app.use(express.json());
 app.use(cors());
 
-// routes
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/studentAdd", addStudentRoutes);
